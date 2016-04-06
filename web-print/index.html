@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="/">
+  <script src="lib/angular2-polyfills.js"></script>
+  <script src="lib/system.src.js"></script>
+  <script src="lib/Rx.js"></script>
+  <script src="lib/angular2.dev.js"></script>
+  <script src="lib/router.dev.js"></script>
+  <script src="lib/http.dev.js"></script>
+  <script src="lib/lodash.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.indigo-pink.min.css">
+  <script  src="https://code.getmdl.io/1.1.2/material.min.js"></script>
+
+  <script>
+    System.config({
+      packages: {
+        app: {
+          format: 'register',
+          defaultExtension: 'js'
+        },
+        'node-uuid': {
+          map: {
+            crypto: '@empty'
+          }
+        }
+      },
+      map: {
+        'lodash': 'lib/lodash.min.js'
+      }
+    });
+    System.import('app/boot')
+      .then(null, console.error.bind(console));
+  </script>
+</head>
+
+<body>
+<ag2-print></ag2-print>
+
+</body>
+
+</html>
+
+

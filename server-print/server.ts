@@ -2,16 +2,18 @@
  * Created by Omar on 4/5/16.
  */
 
-var express = require('express');
-app = express();
-var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-var morgan = require('morgan')
-var passport = require('passport');
-var config = require('./config/main');
-var User = require('./app/models/user');
-var jwt = require('jsonwebtoken');
-var port = 3001;
+/// <reference path="typings/express/express.d.ts" />
+import express = require('express');
+var app = express();
+import mongoose = require('mongoose');
+import bodyParser = require('body-parser');
+import morgan = require('morgan')
+import passport = require('passport');
+import config = require('../config/main');
+import User = require('../app/models/user');
+import jwt = require('jsonwebtoken');
+import {Router} from "../web-print/node_modules/angular2/src/router/router";
+var port:number = 3001;
 
 // use body-parser to get POST requests for API Use
 app.use(bodyParser.urlencoded({extended:false}));
@@ -28,12 +30,12 @@ app.use(passport.initialize());
 mongoose.connect(config.database);
 
 //bring in passport strategy we just defined
-require('./config/passport')(passport);
+require('../config/passport')(passport);
 
 
 //Create API group routes
 
-var apiRoutes = express.Router();
+var apiRoutes:Router = express.Router();
 
 apiRoutes.post('/register',  function(req, res) {
   if(!req.body.email || !req.body.password) {

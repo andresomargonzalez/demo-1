@@ -1,0 +1,36 @@
+[ERR!] cwd  : /Users/Omar/Documents/ag2-print/demo-1-login
+[ERR!] os   : Darwin 15.3.0
+[ERR!] argv : "/usr/local/bin/node" "/usr/local/bin/tsd" "-version"
+[ERR!] node : v4.4.2
+[ERR!] tsd  : 0.6.5
+[ERR!] Error: EACCES: permission denied, open '/Users/Omar/.config/configstore/update-notifier-tsd.yml'
+You don't have access to this file.
+
+[ERR!] CODE : EACCES
+[ERR!] Error: EACCES: permission denied, open '/Users/Omar/.config/configstore/update-notifier-tsd.yml'
+You don't have access to this file.
+
+[ERR!] 
+Please try running this command again as root/Administrator.
+[ERR!] 
+Error: EACCES: permission denied, open '/Users/Omar/.config/configstore/update-notifier-tsd.yml'
+You don't have access to this file.
+
+    at Error (native)
+    at Object.fs.openSync (evalmachine.<anonymous>:549:18)
+    at Object.fs.readFileSync (evalmachine.<anonymous>:397:15)
+    at Object.create.all.get (/usr/local/lib/node_modules/tsd/node_modules/update-notifier/node_modules/configstore/index.js:34:29)
+    at Object.Configstore (/usr/local/lib/node_modules/tsd/node_modules/update-notifier/node_modules/configstore/index.js:27:44)
+    at new UpdateNotifier (/usr/local/lib/node_modules/tsd/node_modules/update-notifier/index.js:25:17)
+    at module.exports (/usr/local/lib/node_modules/tsd/node_modules/update-notifier/index.js:118:23)
+    at /usr/local/lib/node_modules/tsd/build/tsd/cli/update.js:35:20
+    at tryCatch2 (/usr/local/lib/node_modules/tsd/node_modules/bluebird/js/main/util.js:73:19)
+    at Promise$_resolveFromResolver [as _resolveFromResolver] (/usr/local/lib/node_modules/tsd/node_modules/bluebird/js/main/promise.js:595:13)
+
+[ERR!] tsd.json could not be retrieved
+
+[ERR!] .tsdrc could not be retrieved
+
+[ERR!] Please include the following file with any support request:
+    /Users/Omar/Documents/ag2-print/demo-1-login/tsd-debug.log
+
